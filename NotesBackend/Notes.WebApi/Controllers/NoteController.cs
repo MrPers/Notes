@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Notes.WebApi.Controllers
 {
-    [Route("api/{version:apiVersion}/[controller]")]
+    [Route("api/[controller]")]
     public class NoteController : BaseController
     {
         private readonly IMapper _mapper;

@@ -9,6 +9,8 @@ using Notes.Persistence;
 using Notes.Application;
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.Extensions.Options;
 
 namespace Notes.WebApi
 {
@@ -26,6 +28,11 @@ namespace Notes.WebApi
                 config.AddProfile(new AssemblyMappingProfile(Assembly.GetExecutingAssembly()));
                 config.AddProfile(new AssemblyMappingProfile(typeof(INotesDbContext).Assembly));
             });
+
+
+            //services.AddTransient<IConfigureOptions<SwaggerGenOptions>,
+            //        ConfigureSwaggerOptions>();
+            //services.AddSwaggerGen();
 
             services.AddApplication();
             services.AddPersistence(Configuration);
@@ -48,6 +55,18 @@ namespace Notes.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            //app.UseSwagger();
+            //app.UseSwaggerUI(config =>
+            //{
+            //    foreach (var description in provider.ApiVersionDescriptions)
+            //    {
+            //        config.SwaggerEndpoint(
+            //            $"/swagger/{description.GroupName}/swagger.json",
+            //            description.GroupName.ToUpperInvariant());
+            //        config.RoutePrefix = string.Empty;
+            //    }
+            //});
 
             app.UseRouting();
             app.UseHttpsRedirection();
