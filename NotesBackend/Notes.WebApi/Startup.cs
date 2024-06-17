@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Notes.Application.Common.Mappings;
@@ -9,8 +8,7 @@ using Notes.Persistence;
 using Notes.Application;
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Microsoft.Extensions.Options;
+using Notes.WebApi.Middleware;
 
 namespace Notes.WebApi
 {
@@ -68,6 +66,7 @@ namespace Notes.WebApi
             //    }
             //});
 
+            app.UseCustomExceptionHandler();
             app.UseRouting();
             app.UseHttpsRedirection();
             app.UseCors();
