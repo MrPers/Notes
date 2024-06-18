@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Notes.WebApi.Controllers
 {
+    [ApiVersionNeutral]
     [ApiController]
     [Route("api/[controller]/[action]")]
     public abstract class BaseController : ControllerBase

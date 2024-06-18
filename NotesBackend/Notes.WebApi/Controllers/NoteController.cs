@@ -13,7 +13,8 @@ using System.Threading.Tasks;
 
 namespace Notes.WebApi.Controllers
 {
-    [Authorize]
+    [ApiVersionNeutral]
+    [Produces("application/json")]
     [Route("api/[controller]")]
     public class NoteController : BaseController
     {
@@ -21,7 +22,20 @@ namespace Notes.WebApi.Controllers
 
         public NoteController(IMapper mapper) => _mapper = mapper;
 
+        /// <summary>
+        /// Gets the list of notes
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// GET /note
+        /// </remarks>
+        /// <returns>Returns NoteListVm</returns>
+        /// <response code="200">Success</response>
+        /// <response code="401">If the user is unauthorized</response>
         [HttpGet]
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<NoteListVm>> GetAll()
         {
             var query = new GetNoteListQuery
@@ -45,8 +59,8 @@ namespace Notes.WebApi.Controllers
         /// <response code="401">If the user in unauthorized</response>
         [HttpGet("{id}")]
         [Authorize]
-        //[ProducesResponseType(StatusCodes.Status200OK)]
-        //[ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<NoteDetailsVm>> Get(Guid id)
         {
             var query = new GetNoteDetailsQuery
@@ -75,8 +89,8 @@ namespace Notes.WebApi.Controllers
         /// <response code="401">If the user is unauthorized</response>
         [HttpPost]
         [Authorize]
-        //[ProducesResponseType(StatusCodes.Status201Created)]
-        //[ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<Guid>> Create([FromBody] CreateNoteDto createNoteDto)
         {
             var command = _mapper.Map<CreateNoteCommand>(createNoteDto);
@@ -101,8 +115,8 @@ namespace Notes.WebApi.Controllers
         /// <response code="401">If the user is unauthorized</response>
         [HttpPut]
         [Authorize]
-        //[ProducesResponseType(StatusCodes.Status204NoContent)]
-        //[ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Update([FromBody] UpdateNoteDto updateNoteDto)
         {
             var command = _mapper.Map<UpdateNoteCommand>(updateNoteDto);
@@ -124,8 +138,8 @@ namespace Notes.WebApi.Controllers
         /// <response code="401">If the user is unauthorized</response>
         [HttpDelete("{id}")]
         [Authorize]
-        //[ProducesResponseType(StatusCodes.Status204NoContent)]
-        //[ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Delete(Guid id)
         {
             var command = new DeleteNoteCommand

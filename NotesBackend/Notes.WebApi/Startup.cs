@@ -10,6 +10,11 @@ using System.Reflection;
 using Microsoft.Extensions.Configuration;
 using Notes.WebApi.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.IO;
+using System;
+using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
 namespace Notes.WebApi
 {
@@ -29,10 +34,11 @@ namespace Notes.WebApi
             });
 
 
-            //services.AddTransient<IConfigureOptions<SwaggerGenOptions>,
-            //        ConfigureSwaggerOptions>();
-            //services.AddSwaggerGen();
-
+            services.AddVersionedApiExplorer(options =>
+                options.GroupNameFormat = "'v'VVV");
+            services.AddTransient<IConfigureOptions<SwaggerGenOptions>,
+                    ConfigureSwaggerOptions>();
+            services.AddSwaggerGen();
             services.AddApplication();
             services.AddPersistence(Configuration);
             services.AddControllers();
@@ -58,26 +64,27 @@ namespace Notes.WebApi
                     options.Audience = "NotesWebAPI";
                     options.RequireHttpsMetadata = false;
                 });
+            services.AddApiVersioning();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseSwagger();
-            //app.UseSwaggerUI(config =>
-            //{
-            //    foreach (var description in provider.ApiVersionDescriptions)
-            //    {
-            //        config.SwaggerEndpoint(
-            //            $"/swagger/{description.GroupName}/swagger.json",
-            //            description.GroupName.ToUpperInvariant());
-            //        config.RoutePrefix = string.Empty;
-            //    }
-            //});
+            app.UseSwagger();
+            app.UseSwaggerUI(config =>
+            {
+                foreach (var description in provider.ApiVersionDescriptions)
+                {
+                    config.SwaggerEndpoint(
+                        $"/swagger/{description.GroupName}/swagger.json",
+                        description.GroupName.ToUpperInvariant());
+                    config.RoutePrefix = string.Empty;
+                }
+            });
 
             app.UseCustomExceptionHandler();
             app.UseRouting();
@@ -85,7 +92,7 @@ namespace Notes.WebApi
             app.UseCors();
             app.UseAuthentication();
             app.UseAuthorization();
-            //app.UseApiVersioning();
+            app.UseApiVersioning();
 
             app.UseEndpoints(endpoints =>
             {
