@@ -7,8 +7,6 @@ type AuthProviderProps = {
     children: React.ReactNode;
 };
 
-// children?: React.ReactNode;
-
 const AuthProvider: FC<AuthProviderProps> = ({
     userManager: manager,
     children,
