@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,19 +26,19 @@ namespace Notes.WebApi
                     {
                         Version = apiVersion,
                         Title = $"Notes API {apiVersion}",
-                        Description =
-                            "ASP NET Core Web API"
+                        Description = "UserName: anton@gmail.com    Password: anton"
                     });
-
-                options.AddSecurityDefinition($"AuthToken {apiVersion}",
-                    new OpenApiSecurityScheme
+                 
+                options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
                     {
-                        In = ParameterLocation.Header,
-                        Type = SecuritySchemeType.Http,
-                        BearerFormat = "JWT",
-                        Scheme = "bearer",
-                        Name = "Authorization",
-                        Description = "Authorization token"
+                        Type = SecuritySchemeType.OAuth2,
+                        Flows = new OpenApiOAuthFlows 
+                        {
+                            Password = new OpenApiOAuthFlow
+                            {
+                                TokenUrl = new Uri("https://localhost:6001/connect/token")
+                            }
+                        }
                     });
 
                 options.AddSecurityRequirement(new OpenApiSecurityRequirement
@@ -48,10 +49,13 @@ namespace Notes.WebApi
                             Reference = new OpenApiReference
                             {
                                 Type = ReferenceType.SecurityScheme,
-                                Id = $"AuthToken {apiVersion}"
-                            }
+                                Id = "oauth2"
+                            },
+                            Scheme ="oauth2",
+                            Name = "Bearer",
+                            In = ParameterLocation.Header
                         },
-                        new string[] { }
+                        new List<string>()
                     }
                 });
 

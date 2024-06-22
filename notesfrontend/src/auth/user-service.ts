@@ -1,4 +1,4 @@
-import { UserManager, UserManagerSettings } from 'oidc-client';
+import { User, UserManager, UserManagerSettings } from 'oidc-client';
 import { setAuthHeader } from './auth-headers';
 
 const userManagerSettings: UserManagerSettings = {
@@ -11,9 +11,11 @@ const userManagerSettings: UserManagerSettings = {
 };
 
 const userManager = new UserManager(userManagerSettings);
+var user:any;
 export async function loadUser() {
-    const user = await userManager.getUser();
+    user = await userManager.getUser();
     console.log('User: ', user);
+    debugger;
     const token = user?.access_token;
     setAuthHeader(token);
 }
@@ -23,10 +25,12 @@ export const signinRedirect = () => userManager.signinRedirect();
 export const signinRedirectCallback = () =>
     userManager.signinRedirectCallback();
 
-export const signoutRedirect = (args?: any) => {
+export const signoutRedirect = () => {
+    console.log('User: ', user);
+    debugger;
     userManager.clearStaleState();
     userManager.removeUser();
-    return userManager.signoutRedirect(args);
+    return userManager.signoutRedirect(user.id_token );
 };
 
 export const signoutRedirectCallback = () => {

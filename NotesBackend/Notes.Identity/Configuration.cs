@@ -10,7 +10,7 @@ namespace Notes.Identity
         public static IEnumerable<ApiScope> ApiScopes =>
             new List<ApiScope>
             {
-                new ApiScope("NotesWebAPI", "Web API")
+                new ApiScope("notes_scope"),
             };
 
         public static IEnumerable<IdentityResource> IdentityResources =>
@@ -23,11 +23,7 @@ namespace Notes.Identity
         public static IEnumerable<ApiResource> ApiResources =>
             new List<ApiResource>
             {
-                new ApiResource("NotesWebAPI", "Web API", new []
-                    { JwtClaimTypes.Name})
-                {
-                    Scopes = {"NotesWebAPI"}
-                }
+                new ApiResource("notes_resource"),
             };
 
         public static IEnumerable<Client> Clients =>
@@ -35,31 +31,17 @@ namespace Notes.Identity
             {
                 new Client
                 {
-                    ClientId = "notes-web-app",
-                    ClientName = "Notes Web",
-                    AllowedGrantTypes = GrantTypes.Code,
-                    RequireClientSecret = false,
-                    RequirePkce = true,
-                    RedirectUris =
-                    {
-                        "http://localhost:3000/signin-oidc"
-                    },
-                    AllowedCorsOrigins =
-                    {
-                        "http://localhost:3000"
-                    },
-                    PostLogoutRedirectUris =
-                    {
-                        "http://localhost:3000/signout-oidc"
-                    },
+                    ClientId = "client_id_notes",
+                    ClientSecrets = { new Secret("client_secret_notes".ToSha256()) },
+                    AllowedGrantTypes =  GrantTypes.ResourceOwnerPassword,
+                    AllowedCorsOrigins = { "https://localhost:5001" },
                     AllowedScopes =
                     {
+                        "notes_scope",
                         IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile,
-                        "NotesWebAPI"
-                    },
-                    AllowAccessTokensViaBrowser = true
-                }
+                        IdentityServerConstants.StandardScopes.Profile
+                    }
+                },
             };
     }
 }

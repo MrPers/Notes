@@ -9,13 +9,12 @@ using Notes.Application;
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
 using Notes.WebApi.Middleware;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using System.IO;
-using System;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Notes.WebApi.Services;
+using IdentityServer4.AccessTokenValidation;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Notes.WebApi
 {
@@ -33,7 +32,6 @@ namespace Notes.WebApi
                 config.AddProfile(new AssemblyMappingProfile(Assembly.GetExecutingAssembly()));
                 config.AddProfile(new AssemblyMappingProfile(typeof(INotesDbContext).Assembly));
             });
-
 
             services.AddVersionedApiExplorer(options =>
                 options.GroupNameFormat = "'v'VVV");
@@ -56,15 +54,23 @@ namespace Notes.WebApi
 
             services.AddAuthentication(c =>
                 {
-                    c.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                    c.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                    c.DefaultScheme = IdentityServerAuthenticationDefaults.AuthenticationScheme;
+                    c.DefaultChallengeScheme = IdentityServerAuthenticationDefaults.AuthenticationScheme;
+                    c.DefaultAuthenticateScheme = IdentityServerAuthenticationDefaults.AuthenticationScheme;
                 })
                 .AddJwtBearer("Bearer", options =>
                 {
-                    options.Authority = "https://localhost:44380/";
-                    options.Audience = "NotesWebAPI";
+                    options.SaveToken = true;
+                    options.Authority = "https://localhost:6001";
                     options.RequireHttpsMetadata = false;
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = false,
+                    };
                 });
+
+            services.AddAuthorization();//
             services.AddApiVersioning();
 
             services.AddSingleton<ICurrentUserService, CurrentUserService>();
@@ -86,7 +92,11 @@ namespace Notes.WebApi
                     config.SwaggerEndpoint(
                         $"/swagger/{description.GroupName}/swagger.json",
                         description.GroupName.ToUpperInvariant());
-                    config.RoutePrefix = string.Empty;
+                    config.DocumentTitle = "Title";
+                    config.RoutePrefix = "docs";
+                    config.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.List);
+                    config.OAuthClientId("client_id_notes");
+                    config.OAuthClientSecret("client_secret_notes");
                 }
             });
 
