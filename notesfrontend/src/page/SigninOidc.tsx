@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, FC } from 'react';
 import { useHistory } from 'react-router-dom';
 import { signinRedirectCallback } from '../auth/user-service';

@@ -1,39 +1,71 @@
-import { User, UserManager, UserManagerSettings } from 'oidc-client';
-import { setAuthHeader } from './auth-headers';
+import { User, UserManager, UserManagerSettings} from 'oidc-client';
+import { Redirect } from 'react-router-dom';
 
 const userManagerSettings: UserManagerSettings = {
-    client_id: 'notes-web-app',
-    redirect_uri: 'http://localhost:3000/signin-oidc',
-    response_type: 'code',
-    scope: 'openid profile NotesWebAPI',
-    authority: 'https://localhost:44380/',
-    post_logout_redirect_uri: 'http://localhost:3000/signout-oidc',
+    // userStore: new WebStorageStateStore({ store: window.localStorage }),
+    authority: "https://localhost:6001",//
+    client_id: "client_id_js",//
+    response_type: "code",//
+    scope: "openid profile NotesWebAPI",//
+    redirect_uri: "http://localhost:3000/signin-oidc",//
+    silent_redirect_uri : "http://localhost:3000/refresh-oidc",//надо создать
+    post_logout_redirect_uri : "http://localhost:3000/signout-oidc"//
 };
 
 const userManager = new UserManager(userManagerSettings);
-var user:any;
-export async function loadUser() {
-    user = await userManager.getUser();
-    console.log('User: ', user);
-    debugger;
-    const token = user?.access_token;
-    setAuthHeader(token);
+// var user: any;
+
+export async function getUser() {
+    return await userManager.getUser();
 }
 
-export const signinRedirect = () => userManager.signinRedirect();
+export async function getAccessToken() {
+    // if (user == null){
+        // debugger;
+        var user = await getUser();
+    // }
+    // debugger;
+    return user?.access_token;
+}
 
-export const signinRedirectCallback = () =>
-    userManager.signinRedirectCallback();
+export async function callApi() {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://localhost:5001/api/Note");
+    xhr.setRequestHeader("Authorization", "Bearer " + await getAccessToken());
+    xhr.send();
+    
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            return xhr.response;
+        } else {
+            debugger;
+        }
+    }
+}
 
-export const signoutRedirect = () => {
-    console.log('User: ', user);
-    debugger;
-    userManager.clearStaleState();
-    userManager.removeUser();
-    return userManager.signoutRedirect(user.id_token );
+export const signinRefresh = () => 
+    userManager.signinSilentCallback();
+
+export const signinRedirect = () => 
+    userManager.signinRedirect();
+
+export const signinRedirectCallback = async () =>{
+    userManager.signinRedirectCallback()    
+    .then(function (user) {
+        console.log(user);
+        window.location.href = "http://localhost:3000";
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+}
+
+export const signoutRedirect = async () => {
+    return userManager.signoutRedirect();
 };
 
 export const signoutRedirectCallback = () => {
+    // debugger;
     userManager.clearStaleState();
     userManager.removeUser();
     return userManager.signoutRedirectCallback();

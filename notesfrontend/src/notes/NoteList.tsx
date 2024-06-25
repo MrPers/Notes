@@ -1,50 +1,44 @@
-import React, { FC, ReactElement, useRef, useEffect, useState } from 'react';
-import { CreateNoteDto, Client, NoteLookupDto } from '../api/api';
-import { FormControl } from 'react-bootstrap';
+import React, { FC, ReactElement, useEffect, useState } from 'react';
+import axios from 'axios';
+import { getAccessToken } from '../auth/user-service';
 
-const apiClient = new Client('https://localhost:44347');
-
-async function createNote(note: CreateNoteDto) {
-    await apiClient.create(note);
-    console.log('Note is created.');
+export interface NoteLookupDto {
+    id?: string;
+    title?: string | undefined;
 }
 
 const NoteList: FC<{}> = (): ReactElement => {
-    let textInput = useRef(null);
-    const [notes, setNotes] = useState<NoteLookupDto[] | undefined>(undefined);
 
+    const [notes, setNotes] = useState<NoteLookupDto[] | undefined>(undefined);
+    
     async function getNotes() {
-        const noteListVm = await apiClient.getAll();
-        setNotes(noteListVm.notes);
+        axios
+        .get("https://localhost:5001/api/Note",{
+            headers: {
+                "Authorization": "Bearer " + await getAccessToken()
+            }
+        })
+        .then((res) => setNotes(res.data.notes))
+        .catch((err) => console.error(err));
     }
 
     useEffect(() => {
-        setTimeout(getNotes, 500);
+        getNotes();
     }, []);
 
-    const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-        if (event.key === 'Enter') {
-            const note: CreateNoteDto = {
-                title: event.currentTarget.value,
-            };
-            createNote(note);
-            event.currentTarget.value = '';
-            setTimeout(getNotes, 500);
-        }
-    };
-
-    return (
-        <div>
-            Notes
-            <div>
-                <FormControl ref={textInput} onKeyPress={handleKeyPress} />
-            </div>
-            <section>
+    return (  
+            <div className="notes-grid">
                 {notes?.map((note) => (
-                    <div>{note.title}</div>
+                <div className="note-item">
+                    <div className="notes-header">
+                    <button>x</button>
+                    </div>
+                    <h2>{note.title}</h2>
+                    <p>Test data</p>
+                </div>
                 ))}
-            </section>
-        </div>
+            </div>
     );
 };
+
 export default NoteList;

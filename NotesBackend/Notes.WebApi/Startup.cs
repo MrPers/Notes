@@ -42,14 +42,10 @@ namespace Notes.WebApi
             services.AddPersistence(Configuration);
             services.AddControllers();
 
-            services.AddCors(options =>
+            services.AddCors(config =>
             {
-                options.AddDefaultPolicy(policy =>
-                {
-                    policy.AllowAnyHeader();
-                    policy.AllowAnyMethod();
-                    policy.AllowAnyOrigin();
-                });
+                config.AddPolicy("DefaultPolicy",
+                    builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
 
             services.AddAuthentication(c =>
@@ -62,6 +58,7 @@ namespace Notes.WebApi
                 {
                     options.SaveToken = true;
                     options.Authority = "https://localhost:6001";
+                    options.Audience = "https://localhost:6001";
                     options.RequireHttpsMetadata = false;
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
@@ -103,7 +100,7 @@ namespace Notes.WebApi
             app.UseCustomExceptionHandler();
             app.UseRouting();
             app.UseHttpsRedirection();
-            app.UseCors();
+            app.UseCors("DefaultPolicy");
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseApiVersioning();
