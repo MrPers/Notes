@@ -1,11 +1,30 @@
 import React, { FC, ReactElement, useEffect, useState } from 'react';
 import axios from 'axios';
-import { getAccessToken } from '../auth/user-service';
+import { getAccessToken } from '../../auth/user-service';
 
 export interface NoteLookupDto {
     id?: string;
     title?: string | undefined;
 }
+
+// const getNotes = async() => {
+//     try{
+//         const response = await fetch("https://localhost:5001/api/Note",{
+//             headers: {
+//                 // "Content-Type": "application/json",
+//                 "Authorization": "Bearer " + await getAccessToken()
+//               },
+//         });
+
+//         if (response.status != 200){
+//             throw new Error('ERROR');
+//         }
+//         return await response.json();
+//     }
+//     catch(err){
+//         return [];
+//     }
+// }
 
 const NoteList: FC<{}> = (): ReactElement => {
 

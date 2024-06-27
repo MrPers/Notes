@@ -1,13 +1,13 @@
 import React from 'react';
 import { useEffect, FC } from 'react';
 import { useHistory } from 'react-router-dom';
-import { signinRedirectCallback } from '../auth/user-service';
+import { signinRefresh } from '../../auth/user-service';
 
 const SigninOidc: FC<{}> = () => {
     const history = useHistory();
     useEffect(() => {
         async function signinAsync() {
-            await signinRedirectCallback();
+            await signinRefresh();
             history.push('/');
         }
         signinAsync();
@@ -16,3 +16,4 @@ const SigninOidc: FC<{}> = () => {
 };
 
 export default SigninOidc;
+

@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { signinRedirect, signoutRedirect } from './auth/user-service';
-import SignInOidc from './page/SigninOidc';
-import SignOutOidc from './page/SignoutOidc';
-import NoteList from './notes/NoteList';
-import RefreshOidc from './page/RefreshOidc';
+import SignOutOidc from './page/auth/SignoutOidc';
+import NoteList from './page/notes/NoteList';
 import React from 'react';
+import RefreshOidc from './page/auth/RefreshOidc';
+import SignInOidc from './page/auth/SigninOidc';
 
 
 function App() {
@@ -24,10 +24,6 @@ function App() {
       <Router>
           <Switch>
               <Route exact path="/" component={NoteList} />
-          </Switch>
-      </Router>
-      <Router>
-          <Switch>
               <Route path="/signin-oidc" component={SignInOidc} />
               <Route path="/signout-oidc"component={SignOutOidc}/>
               <Route path="/refres-oidc"component={RefreshOidc}/>

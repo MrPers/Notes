@@ -1,46 +1,24 @@
-import { User, UserManager, UserManagerSettings} from 'oidc-client';
-import { Redirect } from 'react-router-dom';
+import { UserManager, UserManagerSettings} from 'oidc-client';
 
 const userManagerSettings: UserManagerSettings = {
-    // userStore: new WebStorageStateStore({ store: window.localStorage }),
     authority: "https://localhost:6001",//
     client_id: "client_id_js",//
     response_type: "code",//
     scope: "openid profile NotesWebAPI",//
     redirect_uri: "http://localhost:3000/signin-oidc",//
-    silent_redirect_uri : "http://localhost:3000/refresh-oidc",//надо создать
+    silent_redirect_uri : "http://localhost:3000/refresh-oidc",
     post_logout_redirect_uri : "http://localhost:3000/signout-oidc"//
 };
 
 const userManager = new UserManager(userManagerSettings);
-// var user: any;
 
 export async function getUser() {
     return await userManager.getUser();
 }
 
 export async function getAccessToken() {
-    // if (user == null){
-        // debugger;
-        var user = await getUser();
-    // }
-    // debugger;
+    var user = await getUser();
     return user?.access_token;
-}
-
-export async function callApi() {
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://localhost:5001/api/Note");
-    xhr.setRequestHeader("Authorization", "Bearer " + await getAccessToken());
-    xhr.send();
-    
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            return xhr.response;
-        } else {
-            debugger;
-        }
-    }
 }
 
 export const signinRefresh = () => 
@@ -65,7 +43,6 @@ export const signoutRedirect = async () => {
 };
 
 export const signoutRedirectCallback = () => {
-    // debugger;
     userManager.clearStaleState();
     userManager.removeUser();
     return userManager.signoutRedirectCallback();

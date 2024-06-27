@@ -1,0 +1,481 @@
+2024-06-27 00:00:30.495 +01:00 [INF] Entity Framework Core 5.0.17 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2024-06-27 00:00:30.734 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-06-27 00:00:30.788 +01:00 [INF] User profile is available. Using 'C:\Users\Anton\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-27 00:00:31.324 +01:00 [INF] Now listening on: https://localhost:5001
+2024-06-27 00:00:31.327 +01:00 [INF] Now listening on: http://localhost:5000
+2024-06-27 00:00:31.328 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-27 00:00:31.328 +01:00 [INF] Hosting environment: Development
+2024-06-27 00:00:31.328 +01:00 [INF] Content root path: C:\Users\Anton\Desktop\Notes\NotesBackend\Notes.WebApi
+2024-06-27 00:01:58.918 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:01:58.918 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:01:58.973 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:01:58.973 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:01:58.980 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 63.5393ms
+2024-06-27 00:01:58.980 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 63.5421ms
+2024-06-27 00:01:58.981 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:01:59.017 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:01:59.546 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:01:59.551 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:01:59.556 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:01:59.557 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 575.3406ms
+2024-06-27 00:01:59.563 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:01:59.563 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:01:59.565 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:01:59.566 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:01:59.566 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:01:59.566 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 3.4766ms
+2024-06-27 00:02:01.467 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:02:01.467 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:01.468 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:02:01.468 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:02:01.468 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:02:01.468 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 1.4760ms
+2024-06-27 00:02:01.470 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:02:01.470 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:01.470 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:02:01.470 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:02:01.471 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:02:01.471 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.8210ms
+2024-06-27 00:02:09.761 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:02:09.761 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:09.761 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.4087ms
+2024-06-27 00:02:09.762 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:02:09.762 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:09.762 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.4281ms
+2024-06-27 00:02:09.764 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:02:09.765 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:02:09.765 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:09.765 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:09.765 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:02:09.765 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:02:09.765 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:02:09.765 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:02:09.765 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:02:09.765 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:02:09.765 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.5401ms
+2024-06-27 00:02:09.765 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.9756ms
+2024-06-27 00:02:16.041 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:02:16.041 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:02:16.041 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:16.041 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:16.041 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.2876ms
+2024-06-27 00:02:16.041 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.5883ms
+2024-06-27 00:02:16.044 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:02:16.044 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:02:16.044 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:16.044 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:16.044 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:02:16.044 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:02:16.044 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:02:16.044 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:02:16.044 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:02:16.044 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:02:16.044 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.4346ms
+2024-06-27 00:02:16.044 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.6711ms
+2024-06-27 00:02:34.229 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:02:34.230 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:34.230 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.5937ms
+2024-06-27 00:02:34.233 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:02:34.233 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:34.233 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:02:34.233 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:02:34.233 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:02:34.233 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.4310ms
+2024-06-27 00:02:35.225 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:02:35.225 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:35.225 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.3064ms
+2024-06-27 00:02:35.228 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:02:35.228 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:35.228 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:02:35.228 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:02:35.228 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:02:35.228 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.4430ms
+2024-06-27 00:02:38.226 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:02:38.226 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:38.226 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.2408ms
+2024-06-27 00:02:38.231 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:02:38.232 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:38.232 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:02:38.232 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:02:38.232 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:02:38.232 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.4890ms
+2024-06-27 00:02:41.164 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:02:41.164 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:41.164 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.5291ms
+2024-06-27 00:02:41.165 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:02:41.165 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:41.166 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.3209ms
+2024-06-27 00:02:41.169 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:02:41.169 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:02:41.169 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:41.169 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:41.169 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:02:41.169 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:02:41.169 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:02:41.169 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:02:41.169 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:02:41.169 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:02:41.169 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.9774ms
+2024-06-27 00:02:41.169 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.5387ms
+2024-06-27 00:02:50.860 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:02:50.860 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:02:50.861 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:50.861 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:50.861 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 1.4416ms
+2024-06-27 00:02:50.861 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 1.2258ms
+2024-06-27 00:02:50.868 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:02:50.868 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:50.869 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:02:50.870 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:02:50.961 +01:00 [INF] Successfully validated the token.
+2024-06-27 00:02:50.961 +01:00 [INF] Successfully validated the token.
+2024-06-27 00:02:50.962 +01:00 [INF] Authorization was successful.
+2024-06-27 00:02:50.962 +01:00 [INF] Authorization was successful.
+2024-06-27 00:02:50.963 +01:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:02:50.963 +01:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:02:50.991 +01:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-06-27 00:02:50.991 +01:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-06-27 00:02:51.244 +01:00 [INF] Notes Request: GetNoteListQuery "0c3790e4-11b3-4c45-9be2-11dcd792578c" {"UserId":"0c3790e4-11b3-4c45-9be2-11dcd792578c","$type":"GetNoteListQuery"}
+2024-06-27 00:02:51.244 +01:00 [INF] Notes Request: GetNoteListQuery "0c3790e4-11b3-4c45-9be2-11dcd792578c" {"UserId":"0c3790e4-11b3-4c45-9be2-11dcd792578c","$type":"GetNoteListQuery"}
+2024-06-27 00:02:51.258 +01:00 [INF] Entity Framework Core 5.0.17 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2024-06-27 00:02:51.258 +01:00 [INF] Entity Framework Core 5.0.17 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2024-06-27 00:02:51.469 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2024-06-27 00:02:51.469 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2024-06-27 00:02:51.479 +01:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2024-06-27 00:02:51.479 +01:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2024-06-27 00:02:51.508 +01:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 512.0292ms
+2024-06-27 00:02:51.508 +01:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 512.0301ms
+2024-06-27 00:02:51.509 +01:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:02:51.509 +01:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:02:51.512 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 200 - application/json;+charset=utf-8 643.9202ms
+2024-06-27 00:02:51.512 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 200 - application/json;+charset=utf-8 642.8983ms
+2024-06-27 00:03:06.342 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:06.342 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:06.343 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:06.343 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:06.343 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 1.2204ms
+2024-06-27 00:03:06.343 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.4722ms
+2024-06-27 00:03:06.354 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:06.354 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:06.354 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:06.354 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:06.355 +01:00 [INF] Successfully validated the token.
+2024-06-27 00:03:06.355 +01:00 [INF] Successfully validated the token.
+2024-06-27 00:03:06.355 +01:00 [INF] Authorization was successful.
+2024-06-27 00:03:06.355 +01:00 [INF] Authorization was successful.
+2024-06-27 00:03:06.355 +01:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:06.355 +01:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:06.355 +01:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-06-27 00:03:06.355 +01:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-06-27 00:03:06.358 +01:00 [INF] Notes Request: GetNoteListQuery "0c3790e4-11b3-4c45-9be2-11dcd792578c" {"UserId":"0c3790e4-11b3-4c45-9be2-11dcd792578c","$type":"GetNoteListQuery"}
+2024-06-27 00:03:06.358 +01:00 [INF] Notes Request: GetNoteListQuery "0c3790e4-11b3-4c45-9be2-11dcd792578c" {"UserId":"0c3790e4-11b3-4c45-9be2-11dcd792578c","$type":"GetNoteListQuery"}
+2024-06-27 00:03:06.396 +01:00 [INF] Entity Framework Core 5.0.17 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2024-06-27 00:03:06.396 +01:00 [INF] Entity Framework Core 5.0.17 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2024-06-27 00:03:06.398 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2024-06-27 00:03:06.399 +01:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2024-06-27 00:03:06.399 +01:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 43.6645ms
+2024-06-27 00:03:06.399 +01:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:06.399 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 200 - application/json;+charset=utf-8 45.2401ms
+2024-06-27 00:03:06.400 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2024-06-27 00:03:06.400 +01:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2024-06-27 00:03:06.400 +01:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 44.8601ms
+2024-06-27 00:03:06.400 +01:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:06.400 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 200 - application/json;+charset=utf-8 46.4920ms
+2024-06-27 00:03:09.072 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:09.073 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:09.073 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.3984ms
+2024-06-27 00:03:09.077 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:09.077 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:09.077 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:09.077 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:09.077 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:03:09.077 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.5505ms
+2024-06-27 00:03:09.077 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:03:09.078 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:03:09.078 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.6962ms
+2024-06-27 00:03:09.080 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:09.080 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:09.080 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:03:09.080 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:03:09.080 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:03:09.081 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.8181ms
+2024-06-27 00:03:11.741 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:11.741 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:11.741 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.3725ms
+2024-06-27 00:03:11.742 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:11.742 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:11.742 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.3706ms
+2024-06-27 00:03:11.745 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:11.745 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:11.746 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:03:11.746 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:03:11.746 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:03:11.746 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.6918ms
+2024-06-27 00:03:11.746 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:11.746 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:11.747 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:03:11.747 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:03:11.747 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:03:11.747 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 1.0938ms
+2024-06-27 00:03:12.165 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:12.165 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:12.165 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.7427ms
+2024-06-27 00:03:12.167 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:12.167 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:12.168 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.4891ms
+2024-06-27 00:03:12.184 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:12.184 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:12.184 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:12.185 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:12.185 +01:00 [INF] Successfully validated the token.
+2024-06-27 00:03:12.185 +01:00 [INF] Successfully validated the token.
+2024-06-27 00:03:12.185 +01:00 [INF] Authorization was successful.
+2024-06-27 00:03:12.185 +01:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:12.185 +01:00 [INF] Authorization was successful.
+2024-06-27 00:03:12.185 +01:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:12.185 +01:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-06-27 00:03:12.185 +01:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-06-27 00:03:12.186 +01:00 [INF] Notes Request: GetNoteListQuery "0c3790e4-11b3-4c45-9be2-11dcd792578c" {"UserId":"0c3790e4-11b3-4c45-9be2-11dcd792578c","$type":"GetNoteListQuery"}
+2024-06-27 00:03:12.186 +01:00 [INF] Notes Request: GetNoteListQuery "0c3790e4-11b3-4c45-9be2-11dcd792578c" {"UserId":"0c3790e4-11b3-4c45-9be2-11dcd792578c","$type":"GetNoteListQuery"}
+2024-06-27 00:03:12.186 +01:00 [INF] Entity Framework Core 5.0.17 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2024-06-27 00:03:12.186 +01:00 [INF] Entity Framework Core 5.0.17 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2024-06-27 00:03:12.188 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2024-06-27 00:03:12.188 +01:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2024-06-27 00:03:12.189 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2024-06-27 00:03:12.189 +01:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 3.1768ms
+2024-06-27 00:03:12.189 +01:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:12.189 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 200 - application/json;+charset=utf-8 4.6224ms
+2024-06-27 00:03:12.189 +01:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2024-06-27 00:03:12.189 +01:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 3.5838ms
+2024-06-27 00:03:12.189 +01:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:12.189 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 200 - application/json;+charset=utf-8 5.4185ms
+2024-06-27 00:03:24.964 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:24.964 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:24.964 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.7385ms
+2024-06-27 00:03:24.968 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:24.968 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:24.969 +01:00 [INF] Successfully validated the token.
+2024-06-27 00:03:24.969 +01:00 [INF] Authorization was successful.
+2024-06-27 00:03:24.969 +01:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:24.969 +01:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-06-27 00:03:24.969 +01:00 [INF] Notes Request: GetNoteListQuery "0c3790e4-11b3-4c45-9be2-11dcd792578c" {"UserId":"0c3790e4-11b3-4c45-9be2-11dcd792578c","$type":"GetNoteListQuery"}
+2024-06-27 00:03:24.970 +01:00 [INF] Entity Framework Core 5.0.17 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2024-06-27 00:03:24.971 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2024-06-27 00:03:24.971 +01:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2024-06-27 00:03:24.971 +01:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 2.2112ms
+2024-06-27 00:03:24.971 +01:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:24.971 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 200 - application/json;+charset=utf-8 3.6921ms
+2024-06-27 00:03:26.931 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:26.931 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:26.931 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.5002ms
+2024-06-27 00:03:26.933 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:26.933 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:26.934 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.7014ms
+2024-06-27 00:03:26.947 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:26.947 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:26.947 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:03:26.948 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:03:26.948 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:03:26.948 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 1.0006ms
+2024-06-27 00:03:26.948 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:26.949 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:26.949 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:03:26.949 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:03:26.949 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:03:26.949 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 1.1148ms
+2024-06-27 00:03:30.140 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:30.138 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:30.141 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:30.141 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:30.141 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.9105ms
+2024-06-27 00:03:30.141 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 3.6613ms
+2024-06-27 00:03:30.153 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:30.153 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:30.154 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:03:30.154 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:03:30.154 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:03:30.154 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:30.154 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 1.2781ms
+2024-06-27 00:03:30.154 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:30.155 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:03:30.155 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:03:30.155 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:03:30.155 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.5714ms
+2024-06-27 00:03:30.617 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:30.619 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:30.619 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:03:30.619 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:30.619 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.2387ms
+2024-06-27 00:03:30.619 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 2.0843ms
+2024-06-27 00:03:30.627 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:30.628 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:30.629 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:03:30.629 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:03:30.630 +01:00 [INF] Successfully validated the token.
+2024-06-27 00:03:30.630 +01:00 [INF] Successfully validated the token.
+2024-06-27 00:03:30.630 +01:00 [INF] Authorization was successful.
+2024-06-27 00:03:30.630 +01:00 [INF] Authorization was successful.
+2024-06-27 00:03:30.630 +01:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:30.630 +01:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:30.630 +01:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-06-27 00:03:30.630 +01:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-06-27 00:03:30.630 +01:00 [INF] Notes Request: GetNoteListQuery "0c3790e4-11b3-4c45-9be2-11dcd792578c" {"UserId":"0c3790e4-11b3-4c45-9be2-11dcd792578c","$type":"GetNoteListQuery"}
+2024-06-27 00:03:30.630 +01:00 [INF] Notes Request: GetNoteListQuery "0c3790e4-11b3-4c45-9be2-11dcd792578c" {"UserId":"0c3790e4-11b3-4c45-9be2-11dcd792578c","$type":"GetNoteListQuery"}
+2024-06-27 00:03:30.631 +01:00 [INF] Entity Framework Core 5.0.17 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2024-06-27 00:03:30.631 +01:00 [INF] Entity Framework Core 5.0.17 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2024-06-27 00:03:30.633 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2024-06-27 00:03:30.633 +01:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2024-06-27 00:03:30.634 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2024-06-27 00:03:30.634 +01:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 3.708ms
+2024-06-27 00:03:30.634 +01:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:30.634 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 200 - application/json;+charset=utf-8 7.2929ms
+2024-06-27 00:03:30.634 +01:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2024-06-27 00:03:30.634 +01:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 4.1812ms
+2024-06-27 00:03:30.634 +01:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:03:30.635 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 200 - application/json;+charset=utf-8 5.4800ms
+2024-06-27 00:04:39.345 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:04:39.346 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:04:39.346 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.6066ms
+2024-06-27 00:04:39.350 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:04:39.350 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:04:39.350 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.3561ms
+2024-06-27 00:04:39.362 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:04:39.363 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:04:39.363 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:04:39.363 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:04:39.363 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:04:39.364 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:04:39.364 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:04:39.364 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 1.6252ms
+2024-06-27 00:04:39.364 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:04:39.364 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:04:39.364 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:04:39.364 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.9153ms
+2024-06-27 00:04:46.423 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:04:46.423 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:04:46.423 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:04:46.424 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:04:46.423 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.5539ms
+2024-06-27 00:04:46.424 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.2043ms
+2024-06-27 00:04:46.426 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:04:46.426 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:04:46.426 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:04:46.426 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:04:46.426 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:04:46.426 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-06-27 00:04:46.426 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:04:46.426 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-27 00:04:46.426 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:04:46.426 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-27 00:04:46.427 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.6806ms
+2024-06-27 00:04:46.427 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 401 0 - 0.5106ms
+2024-06-27 00:04:46.828 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:04:46.828 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:04:46.828 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:04:46.828 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.7599ms
+2024-06-27 00:04:46.828 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:04:46.829 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.3498ms
+2024-06-27 00:04:46.833 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:04:46.833 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:04:46.833 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:04:46.834 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:04:46.834 +01:00 [INF] Successfully validated the token.
+2024-06-27 00:04:46.834 +01:00 [INF] Successfully validated the token.
+2024-06-27 00:04:46.834 +01:00 [INF] Authorization was successful.
+2024-06-27 00:04:46.834 +01:00 [INF] Authorization was successful.
+2024-06-27 00:04:46.834 +01:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:04:46.834 +01:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:04:46.834 +01:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-06-27 00:04:46.834 +01:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-06-27 00:04:46.835 +01:00 [INF] Notes Request: GetNoteListQuery "0c3790e4-11b3-4c45-9be2-11dcd792578c" {"UserId":"0c3790e4-11b3-4c45-9be2-11dcd792578c","$type":"GetNoteListQuery"}
+2024-06-27 00:04:46.835 +01:00 [INF] Notes Request: GetNoteListQuery "0c3790e4-11b3-4c45-9be2-11dcd792578c" {"UserId":"0c3790e4-11b3-4c45-9be2-11dcd792578c","$type":"GetNoteListQuery"}
+2024-06-27 00:04:46.835 +01:00 [INF] Entity Framework Core 5.0.17 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2024-06-27 00:04:46.835 +01:00 [INF] Entity Framework Core 5.0.17 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2024-06-27 00:04:46.836 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2024-06-27 00:04:46.837 +01:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2024-06-27 00:04:46.837 +01:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 2.4877ms
+2024-06-27 00:04:46.837 +01:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:04:46.837 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 200 - application/json;+charset=utf-8 3.7858ms
+2024-06-27 00:04:46.841 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2024-06-27 00:04:46.842 +01:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2024-06-27 00:04:46.842 +01:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 7.2823ms
+2024-06-27 00:04:46.842 +01:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:04:46.842 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 200 - application/json;+charset=utf-8 9.3068ms
+2024-06-27 00:07:20.237 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:5001/api/Note - -
+2024-06-27 00:07:20.237 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:07:20.238 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:5001/api/Note - - - 204 - - 0.3332ms
+2024-06-27 00:07:20.240 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Note - -
+2024-06-27 00:07:20.240 +01:00 [INF] CORS policy execution successful.
+2024-06-27 00:07:20.240 +01:00 [INF] Successfully validated the token.
+2024-06-27 00:07:20.240 +01:00 [INF] Authorization was successful.
+2024-06-27 00:07:20.240 +01:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:07:20.241 +01:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-06-27 00:07:20.241 +01:00 [INF] Notes Request: GetNoteListQuery "0c3790e4-11b3-4c45-9be2-11dcd792578c" {"UserId":"0c3790e4-11b3-4c45-9be2-11dcd792578c","$type":"GetNoteListQuery"}
+2024-06-27 00:07:20.241 +01:00 [INF] Entity Framework Core 5.0.17 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2024-06-27 00:07:20.242 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2024-06-27 00:07:20.242 +01:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2024-06-27 00:07:20.242 +01:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 1.4235ms
+2024-06-27 00:07:20.242 +01:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-06-27 00:07:20.242 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Note - - - 200 - application/json;+charset=utf-8 2.2503ms
