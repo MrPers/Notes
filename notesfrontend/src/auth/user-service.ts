@@ -1,4 +1,4 @@
-import { UserManager, UserManagerSettings} from 'oidc-client';
+import { User, UserManager, UserManagerSettings} from 'oidc-client';
 
 const userManagerSettings: UserManagerSettings = {
     authority: "https://localhost:6001",//
@@ -11,17 +11,21 @@ const userManagerSettings: UserManagerSettings = {
 };
 
 const userManager = new UserManager(userManagerSettings);
+let userGlob: User | null;
 
-export async function getUser() {
-    return await userManager.getUser();
+userManager.getUser()
+    .then((user) => userGlob = user);
+
+
+export function isAuthenticated(): boolean {
+    return userGlob != null && ! userGlob.expired;
 }
 
-export async function getAccessToken() {
-    var user = await getUser();
-    return user?.access_token;
+export function getAccessToken() {
+    return userGlob?.access_token;
 }
 
-export const signinRefresh = () => 
+export const signinRefresh = (): Promise<User| undefined> => 
     userManager.signinSilentCallback();
 
 export const signinRedirect = () => 
