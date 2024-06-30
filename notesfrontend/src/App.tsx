@@ -1,13 +1,12 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import SignOutOidc from './page/auth/SignoutOidc';
+import SignOutOidc from './pages/auth/SignoutOidc';
 import NoteList from './components/notes/NoteList';
-import React from 'react';
-import RefreshOidc from './page/auth/RefreshOidc';
-import SignInOidc from './page/auth/SigninOidc';
+import React, { useState } from 'react';
+import RefreshOidc from './pages/auth/RefreshOidc';
+import SignInOidc from './pages/auth/SigninOidc';
 import NoteForm from './components/noteForm/NoteForm';
-import Header from './components/header/header';
-
+import Header from './components/header/Header';
 
 export function App() {
   return (

@@ -1,6 +1,6 @@
 import React, { FC, ReactElement} from 'react';
 import { isAuthenticated, signinRedirect, signoutRedirect } from '../../auth/user-service';
-import './header.css';
+import './Header.css';
 
 const Header: FC<{}> = (): ReactElement => {
     return (  

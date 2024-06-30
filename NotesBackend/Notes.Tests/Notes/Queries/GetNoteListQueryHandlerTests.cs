@@ -36,7 +36,7 @@ namespace Notes.Tests.Notes.Queries
                 CancellationToken.None);
 
             // Assert
-            result.ShouldBeOfType<NoteListVm>();
+            result.ShouldBeOfType<NoteDetailsListVm>();
             result.Notes.Count.ShouldBe(2);
         }
     }
