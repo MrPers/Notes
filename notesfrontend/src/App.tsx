@@ -1,8 +1,8 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import SignOutOidc from './pages/auth/SignoutOidc';
 import NoteList from './components/notes/NoteList';
-import React, { useState } from 'react';
+import React from 'react';
 import RefreshOidc from './pages/auth/RefreshOidc';
 import SignInOidc from './pages/auth/SigninOidc';
 import NoteForm from './components/noteForm/NoteForm';
@@ -17,11 +17,11 @@ export function App() {
         <NoteList />
       </div>
       <BrowserRouter>
-        <Switch>
-          <Route path="/signin-oidc" component={SignInOidc} />
-          <Route path="/signout-oidc" component={SignOutOidc} />
-          <Route path="/refres-oidc" component={RefreshOidc} />
-        </Switch>
+        <Routes>
+          <Route path="/signin-oidc" element={<SignInOidc/>} />
+          <Route path="/signout-oidc" element={<SignOutOidc/>} />
+          <Route path="/refres-oidc" element={<RefreshOidc/>} />
+        </Routes>
       </BrowserRouter>
     </>
   );

@@ -1,17 +1,16 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useEffect, FC } from 'react';
-import { useHistory } from 'react-router-dom';
 import { signinRedirectCallback } from '../../auth/user-service';
 
 const SigninOidc: FC<{}> = () => {
-    const history = useHistory();
+    const navigate  = useNavigate();
     useEffect(() => {
         async function signinAsync() {
             await signinRedirectCallback();
-            history.push('/');
+            navigate('/');
         }
         signinAsync();
-    }, [history]);
+    }, [navigate]);
     return <div>Redirecting...</div>;
 };
 

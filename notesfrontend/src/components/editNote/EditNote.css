@@ -61,27 +61,3 @@ border: 1px solid black;
 padding: 10px;
 font-size: 16px;
 }
-
-/* open */
-
-.modal--entering,
-.modal--entered {
-  opacity: 1;
-}
-
-.modal--entering .modal-content,
-.modal--entered .modal-content {
-  transform: translateY(0);
-}
-
-/* close */
-
-.modal--exiting,
-.modal--exited {
-  opacity: 0;
-}
-
-.modal--exiting .modal-content,
-.modal--exited .modal-content {
-  transform: translateY(-50px);
-}
