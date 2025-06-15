@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Notes.WebApi\\Notes.WebApi.csproj",
+        "Action": "Start",
+        "DebugTarget": "Notes.WebApi"
+      },
+      {
+        "Path": "Notes.Identity\\Notes.Identity.csproj",
+        "Action": "Start",
+        "DebugTarget": "Notes.Identity"
+      }
+    ]
+  }
+]

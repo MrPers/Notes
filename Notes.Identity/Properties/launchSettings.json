@@ -1,0 +1,20 @@
+{
+  "profiles": {
+    "Notes.Identity": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:6001;http://localhost:6000"
+    },
+    //"Container (Dockerfile)": {
+    //  "commandName": "Docker",
+    //  "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+    //  "environmentVariables": {
+    //    "ASPNETCORE_URLS": "https://+:443;http://+:80"
+    //  },
+    //  "publishAllPorts": true,
+    //  "useSSL": true
+    //}
+  }
+}
