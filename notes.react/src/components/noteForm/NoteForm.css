@@ -1,0 +1,54 @@
+.note-form {
+  background: white;
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: var(--spacing);
+}
+
+.form-group {
+  margin-bottom: var(--spacing);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.form-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.form-button:hover:not(:disabled) {
+  background-color: var(--secondary-color);
+}
+
+.form-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
